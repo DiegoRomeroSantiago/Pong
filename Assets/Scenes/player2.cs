@@ -1,29 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class player2 : MonoBehaviour
 {
-    private float velocidad = 5;
-    
+    // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    // Update is called once per frame
     void Update()
     {
-      
-        if (Input.GetKey(KeyCode.W))
+
+        if (Input.GetKey(KeyCode.E))
         {
             transform.Translate(new Vector3(0, 1, 0) * 5 * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(new Vector3(0, -1, 0) * 5 * Time.deltaTime);
         }
-        
 
 
     }
