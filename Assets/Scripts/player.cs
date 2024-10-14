@@ -23,7 +23,10 @@ public class NewBehaviourScript : MonoBehaviour
         {
             transform.Translate(new Vector3(0, -1, 0) * 5 * Time.deltaTime);
         }
-        
+
+        //todo esto es para que las palas choquen con las paredes 
+        float yClamped = Mathf.Clamp(transform.position.y, -3,3);
+        transform.position = new Vector3(transform.position.x, yClamped, transform.position.z);
 
 
     }
